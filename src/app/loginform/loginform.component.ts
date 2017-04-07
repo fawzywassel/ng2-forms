@@ -15,6 +15,7 @@ export class User {
 export class LoginformComponent implements OnInit {
   
   user:User
+  submitted : boolean = false //check if form submitted
   constructor() { }
 
   ngOnInit() {
@@ -28,6 +29,11 @@ export class LoginformComponent implements OnInit {
     return JSON.stringify(
      this.user
     )
+  }
+
+  processForm(){
+    console.log(this.user)
+    this.submitted = true;
   }
 
 }
